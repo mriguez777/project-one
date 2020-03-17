@@ -3,6 +3,7 @@ $(document).ready(function () {
         e.preventDefault();
         $("#artistHeadline").empty();
         $("#newsDisplay").empty();
+        $("#gifImage").empty();
 
         var artist = $("input[name='artist']").val();
         console.log(artist);
@@ -19,10 +20,8 @@ $(document).ready(function () {
 
             $("#artistHeadline").append(data.articles[0].title);
             $("#newsDisplay").append(data.articles[0].description);
-
-        }).then(function () {
             //insert next api call
-            $("gifDisplay").empty();
+        }).then(function () {
 
             var queryURL2 =
                 "https://api.giphy.com/v1/gifs/search?q=" +
@@ -47,12 +46,8 @@ $(document).ready(function () {
                     newgifDiv.prepend(gifImage);
                     // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
                     $("#gifImage").prepend(newgifDiv);
-
                 };
-
             });
-
         });
-
-    })
-})
+    });
+});

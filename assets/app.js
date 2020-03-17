@@ -6,7 +6,7 @@ $(document).ready(function () {
         var artist = $("input[name='artist']").val();
         console.log(artist);
 
-        var queryURL = "http://newsapi.org/v2/everything?q=" + artist +
+        var queryURL = "http://newsapi.org/v2/everything?qInTitle=" + artist +
             "&" +
             "apiKey=c338cad50e1e4c6d8aa41548e7259844";
         console.log(queryURL);

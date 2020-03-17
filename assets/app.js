@@ -2,6 +2,8 @@
 $(document).ready(function () {
     $("#forminfo").on("submit", function (e) {
         e.preventDefault();
+        $("#artistHeadline").empty();
+        $("#newsDisplay").empty();
 
         var artist = $("input[name='artist']").val();
         console.log(artist);
@@ -20,6 +22,6 @@ $(document).ready(function () {
 
         });
 
-       
     });
+
 });

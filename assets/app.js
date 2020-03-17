@@ -21,6 +21,9 @@ $(document).ready(function () {
             $("#artistHeadline").append(data.articles[0].title);
             $("#newsDisplay").append(data.articles[0].description);
 
+        }).then(function () {
+//insert next api call
+
         });
 
     });

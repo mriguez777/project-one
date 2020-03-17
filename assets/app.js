@@ -7,6 +7,7 @@ $(document).ready(function () {
 
         var artist = $("input[name='artist']").val();
         console.log(artist);
+        $("#artistHeader").text(artist)
 
         var queryURL = "http://newsapi.org/v2/everything?qInTitle=" + artist +
             "&" +

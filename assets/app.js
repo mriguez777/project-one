@@ -13,8 +13,9 @@ $(document).ready(function () {
 
         $.get(queryURL, function (data) {
             console.log(data);
-            $("#artistHeadline").append(data.title);
-            $("#newsDisplay").append(data.content)
+            console.log(data.articles.title)
+            $("#artistHeadline").append(data.articles[0].title);
+            $("#newsDisplay").append(data.articles[0].content);
         });
     });
 });

@@ -13,9 +13,13 @@ $(document).ready(function () {
 
         $.get(queryURL, function (data) {
             console.log(data);
-            console.log(data.articles.title)
+            console.log(data.articles[0].title);
+
             $("#artistHeadline").append(data.articles[0].title);
             $("#newsDisplay").append(data.articles[0].content);
+
         });
+
+       
     });
 });

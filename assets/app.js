@@ -16,9 +16,10 @@ $(document).ready(function () {
         $.get(queryURL, function (data) {
             console.log(data);
             console.log(data.articles[0].title);
+            console.log(data.articles[0].description);
 
             $("#artistHeadline").append(data.articles[0].title);
-            $("#newsDisplay").append(data.articles[0].content);
+            $("#newsDisplay").append(data.articles[0].description);
 
         });
 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/app.js"></script>
+
+    <title>Build Your Own FanPage</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Build Your Fan-Page</h1>
+                    <p class="lead">This is a simple app that helps you build a shrine to your favorite band/ artist.
+                        <ul>
+                            <li>Select your favorite band using spotify.</li>
+                            <li>After selecting your favorite band watch the page populate.</li>
+                            <li>You'll get to laugh at hilarious gifs of your favorite artist.</li>
+                            <li>Maybe even cry while you update yourself on their latest happenings.</li>
+                            <li>In the end, you'll have your very own ultimate fandom Fan-Page</li>
+                        </ul>
+
+                        Enter your favorite artist below to watch the magic happen!
+                    </p>
+                    <form id="forminfo">
+                        <span id="artistName"> Enter Your Favorite Artist Here: <input type="text" name="artist">
+                            <button id="artistBtn" type="submit">Go! </button>
+                        </span>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div>
+                    <h1 id="artistHeader">
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="jumbotron">
+                    <div class="spotDiv" id="spotDisplay">
+                        <h4>Spotify:</h4>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="jumbotron">
+                    <div class="tmDiv" id="tmDisplay">
+                        <h4>Ticket Master Info:</h4>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="jumbotron">
+                    <div class="newsDiv">
+                        <h4>Headlines that could make you cry:</h4>
+                        <br>
+                        <h1 id="artistHeadline"></h1>
+                        <p id="newsDisplay"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="jumbotron">
+                    <div class="gifDiv">
+                        <h4>Gifs to make you laugh:</h4>
+                        <br>
+                        <div id="gifImage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

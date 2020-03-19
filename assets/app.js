@@ -9,7 +9,7 @@ $(document).ready(function () {
         console.log(artist);
         $("#artistHeader").text(artist)
 
-        var queryURL = "http://newsapi.org/v2/everything?qInTitle=" + artist +
+        var queryURL = "https://newsapi.org/v2/everything?qInTitle=" + artist +
             "&" +
             "apiKey=c338cad50e1e4c6d8aa41548e7259844";
         console.log(queryURL);
@@ -49,6 +49,18 @@ $(document).ready(function () {
                     $("#gifImage").prepend(newgifDiv);
                 };
             });
+        }).then(function () {
+            var queryURL3 = "https://api.deezer.com/version/service/id/method/?parameters" 
+            + artist;
+            console.log(queryURL3);
+            $.get(queryURL3, function (object) {
+                console.log(object);
+                console.log(object.data.id[0].artist);
+                console.log(object.data.id[0].title_short);
+
+                $("#spotDisplay").append(object.data.id[0].title_short);
+
+            })
         });
     });
-});
+})

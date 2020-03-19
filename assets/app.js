@@ -9,7 +9,7 @@ $(document).ready(function () {
         console.log(artist);
         $("#artistHeader").text(artist)
 
-        var queryURL = "http://newsapi.org/v2/everything?qInTitle=" + artist +
+        var queryURL = "https://newsapi.org/v2/everything?qInTitle=" + artist +
             "&" +
             "apiKey=c338cad50e1e4c6d8aa41548e7259844";
         console.log(queryURL);

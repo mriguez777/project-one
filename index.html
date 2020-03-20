@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/app.js"></script>
 
-    <title>Build Your Own FanPage</title>
+    <title>FanPagester</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="jumbotron">
-                    <h1 class="display-4">Build Your Fan-Page</h1>
+                    <h1 class="display-4">FanPagester!</h1>
                     <p class="lead">This is a simple app that helps you build a shrine to your favorite band/ artist.
                         <ul>
                             <li>Select your favorite band using spotify.</li>
@@ -45,6 +45,7 @@
             <div class="col-xl-12">
                 <div>
                     <h1 id="artistHeader">
+                        <div id="artistHeadline"></div>
                     </h1>
                 </div>
             </div>
@@ -54,7 +55,7 @@
             <div class="col-xl-12">
                 <div class="jumbotron">
                     <div class="spotDiv" id="spotDisplay">
-                        <h4>Spotify:</h4>
+                        <h4>Tracks:</h4>
                         <br>
                     </div>
                 </div>
@@ -65,6 +66,7 @@
                 <div class="jumbotron">
                     <div class="tmDiv" id="tmDisplay">
                         <h4>Ticket Master Info:</h4>
+
                         <br>
                     </div>
                 </div>
@@ -74,9 +76,8 @@
             <div class="col-xl-12">
                 <div class="jumbotron">
                     <div class="newsDiv">
-                        <h4>Headlines that could make you cry:</h4>
+                        <h4>In the News:</h4>
                         <br>
-                        <h1 id="artistHeadline"></h1>
                         <p id="newsDisplay"></p>
                     </div>
                 </div>
@@ -94,8 +95,11 @@
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="row">
+            <div id="ytplayer"></div>
+        </div>
+    </div>
 
 </body>
 

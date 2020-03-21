@@ -43,7 +43,7 @@ $(document).ready(function () {
         }).then(function () {
 
             $.ajax({
-                url: "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=2b35547bd5675d8ecb2b911ee9901f59&format=json",
+                url: "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=2b35547bd5675d8ecb2b911ee9901f59&format=json",
                 success: function (response3) {
                     console.log(response3);
 

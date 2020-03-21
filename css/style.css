@@ -160,3 +160,13 @@ button {
   background-size: 100%;
   transition: background 0s;
   }
+
+#forminfo {
+  padding: 15px;
+}
+
+  @media screen and (max-width: 800px) {
+    .jumbotron, .holder {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }

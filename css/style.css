@@ -116,10 +116,16 @@ h1 {
   font-family: 'Inknut Antiqua', serif;;
   font-size: 50px;
   text-align: center;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h4 {
   font-family: 'Sen', sans-serif;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #artistName {

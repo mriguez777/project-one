@@ -6,6 +6,8 @@ $(document).ready(function () {
         $("#newsDisplay").empty();
         $("#gifImage").empty();
         $("#spotDisplay").empty();
+        $("#bioDisplay").empty();
+
 
         var artist = $("input[name='artist']").val();
         console.log(artist);
@@ -15,7 +17,7 @@ $(document).ready(function () {
             "https://api.giphy.com/v1/gifs/search?q=" +
             artist +
             "&api_key=o2BMu32QNHXQZs2A5dgV6kntwDSDTrXU&limit=3";
-      
+
         console.log(queryURL);
 
         $.get(queryURL, function (response2) {
@@ -55,7 +57,7 @@ $(document).ready(function () {
                     // Appending the paragraph and image tag to the animalDiv
                     newbioDiv.append(p);
                     // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-                    $("#spotDisplay").prepend(newbioDiv);
+                    $("#bioDisplay").append(newbioDiv);
                 }
             });
 
@@ -100,7 +102,7 @@ $(document).ready(function () {
 
         }).then(function () {
 
-            var queryURL2 = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + artist + "&api-key=N1PAfjpWLPTkYo3aG4S8CFaFm9UlS6mv&limit=3"
+            var queryURL2 = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + artist + "&api-key=N1PAfjpWLPTkYo3aG4S8CFaFm9UlS6mv"
 
             console.log(queryURL2);
 
@@ -130,7 +132,60 @@ $(document).ready(function () {
 
             });
 
-        });
+        }).then(function () {
+
+            function authenticate() {
+                return gapi.auth2.getAuthInstance()
+                    .signIn({ scope: "https://www.googleapis.com/auth/youtube.force-ssl" })
+                    .then(function () { console.log("Sign-in successful"); },
+                        function (err) { console.error("Error signing in", err); });
+            }
+            function loadClient() {
+                gapi.client.setApiKey("AIzaSyBA6-_OD-6JJj0-Gr4FjtF6KIeZeBQxXQ8");
+                return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+                    .then(function () { console.log("GAPI client loaded for API"); },
+                        function (err) { console.error("Error loading GAPI client for API", err); });
+            }
+            // Make sure the client is loaded and sign-in is complete before calling this method.
+            function execute() {
+                return gapi.client.youtube.search.list({
+                    "part": "snippet",
+                    "maxResults": 3,
+                    "q": artist
+                })
+                    .then(function (response5) {
+                        // Handle the results here (response.result has the parsed body).
+                        console.log("Response", response5.result);
+
+                        youTubeSearch
+                    },
+                        function (err) { console.error("Execute error", err); });
+            }
+            gapi.load("client:auth2", function () {
+                gapi.auth2.init({ client_id: "YOUR_CLIENT_ID" });
+            });
+
+            execute();
+            authenticate().then(loadClient);
+
+
+            // var settings = {
+            //     "async": true,
+            //     "crossDomain": true,
+            //     "url": "https://coolguruji-youtube-to-mp3-download-v1.p.rapidapi.com/?id=lF-jPBnZ098",
+            //     "method": "GET",
+            //     "headers": {
+            //         "x-rapidapi-host": "coolguruji-youtube-to-mp3-download-v1.p.rapidapi.com",
+            //         "x-rapidapi-key": "286743b9e8mshca96ef72bc84158p10a340jsn84bc27c45ef1",
+            //     }
+            // }
+
+            // $.ajax(settings).done(function (response5) {
+            //     console.log(response5);
+            // });
+
+
+        })
 
     });
 });

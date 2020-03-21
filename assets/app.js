@@ -14,7 +14,7 @@ $(document).ready(function () {
         var queryURL =
             "https://api.giphy.com/v1/gifs/search?q=" +
             artist +
-            "&api_key=o2BMu32QNHXQZs2A5dgV6kntwDSDTrXU&limit=10";
+            "&api_key=o2BMu32QNHXQZs2A5dgV6kntwDSDTrXU&limit=3";
       
         console.log(queryURL);
 

@@ -5,11 +5,17 @@ body {
 
 .container {
   width: 100%;
+  min-height: 500px;
+}
+
+#holder {
+  background-color: rgb(150, 104, 172);
+  min-height: 500px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .mainContent {
-  background-color: rgb(150, 104, 172);
-  height: 500px;
   width: 40%;
   float: left;
   margin: 0 auto;
@@ -30,10 +36,8 @@ body {
 
 .otherContent {
   width: 60%;
-  min-height: 500px;
   float: left;
   margin: 0 auto;
-  background-color: rgb(150, 104, 172);
 }
 
 .jumbotron {
@@ -112,10 +116,16 @@ h1 {
   font-family: 'Inknut Antiqua', serif;;
   font-size: 50px;
   text-align: center;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h4 {
   font-family: 'Sen', sans-serif;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #artistName {
@@ -134,3 +144,35 @@ h4 {
   right: 5px;
   cursor: pointer;
 }
+
+button {
+  color: rgb(150, 104, 172);
+  background-color: lightgray;
+  border: 1px solid rgb(150, 104, 172);
+  border-radius: 4px;
+  cursor: pointer;
+  height:32px;
+  font-size:14px;
+  box-shadow: 0 0 4px #999;
+  background-position: center;
+  transition: background 0.8s;
+  }
+  button:hover {
+  background:rgb(150, 104, 172) radial-gradient(circle, transparent 1%, #be8be0 1%) center/15000%;
+  color: white;
+  }
+  button:active{
+  background-color:lightgray;
+  background-size: 100%;
+  transition: background 0s;
+  }
+
+#forminfo {
+  padding: 15px;
+}
+
+  @media screen and (max-width: 800px) {
+    .jumbotron, .holder {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }

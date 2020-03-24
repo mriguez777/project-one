@@ -13,6 +13,7 @@ body {
   min-height: 500px;
   width: 100%;
   overflow: hidden;
+  margin: 1%;
 }
 
 .mainContent {
@@ -33,11 +34,36 @@ body {
   padding: 5px;
 }
 
+#pContainer {
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  min-height: 260px;
+  margin: 0 auto;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#ytDisplay {
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  min-height: 260px;
+  margin: 0 auto;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 
 .otherContent {
   width: 60%;
   float: left;
   margin: 0 auto;
+  
 }
 
 .jumbotron {

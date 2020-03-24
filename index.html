@@ -8,10 +8,10 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <script type="text/javascript" src="assets\app.js"></script>
     <link rel="stylesheet" href="css\style.css">
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
-    <script src="https://apis.google.com/js/api.js"></script>
 
 
     <title>FanPagester</title>
@@ -42,10 +42,8 @@
                 <h3>Tracks:</h3>
                 <br>
             </div>
-            <div class="tmDiv" id="tmDisplay">
-                <h3>Upcoming Events:</h3>
                 <br>
-            </div>
+            </div> -->
             <div class="newsDiv">
                 <h3>Headlines, Get Your Headlines:</h3>
                 <br>
@@ -64,19 +62,37 @@
                     </span>
                 </form>
             </div>
+
             <br>
+
             <div class="gifDiv">
                 <h3>Gifs to make you laugh:</h3>
                 <br>
                 <div id="gifImage">
                 </div>
             </div>
-            <div id="youTubeSearch">
-                <!-- <button id="authenticate">authorize and load</button>
-                <button id="execute">execute</button> -->
+
+            <br>
+
+            <div id="pContainer">
+                <h4>YouTube Player:</h4>
+                <div id="player">
+                    <iframe id="existing-iframe-example" width="640" height="360"
+                        src="https://www.youtube.com/embed?listType=search&list=Diplo" frameborder="0"
+                        style="border: solid 4px #37474F">
+                    </iframe>
+                </div>
             </div>
+            <br>
+
+            <div id="ytDisplay">
+                <h4>Other Videos:</h4>
+                <div id="youTubeSearch"></div>
+                <div id="youTubeBtns"></div>
+
+            </div>
+
         </div>
-    </div>
         <footer id="footer">
             <div id="footer-content">This page made by: Sanakee, Mike, Rachael, and Jake</div>
         </footer>
